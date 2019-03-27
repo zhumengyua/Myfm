@@ -193,8 +193,7 @@ var Fm = {
   loadLyric() {
     var _this = this
     console.log('loadMusic..')
-    $.getJSON('//api.jirengu.com/fm/getLyric.com
-              ', {
+    $.getJSON('//api.jirengu.com/fm/getLyric.com', {
       sid: this.song.sid
     }).done(function (ret) {
       var lyric = ret.lyric
