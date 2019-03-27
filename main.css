@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei"
+}
+
+*::after {
+    box-sizing: border-box;
+}
+
+*::before {
+    box-sizing: border-box;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+* {
+    list-style: none;
+    color: white;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+body {
+    height: 100vh;
+    background-color: #8B897B;
+
+}
+
+.bg {
+    background: url(spring.jpg);
+    background-size: cover;
+    z-index: -1;
+}
+
+.bg::before {
+    height: 100vh;
+    z-index: -1;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.musice-page {
+    height: 100%;
+    overflow: hidden;
+}
+
+.play {
+    height: calc(100% - 24vh);
+    width:80%;
+    min-width: 900px;
+    margin: auto;
+    display: flex;
+    padding-top: 15vh;
+}
+
+.leftCon {
+    float: left;
+    width: 46vh;
+}
+
+.leftImage {
+    width: 46vh;
+    height: 46vh;
+}
+
+.leftImage>figure>img {
+    width: 46vh;
+    height: 46vh;
+}
+
+.actions {
+    height: 35px;
+    margin: 4vh 0;
+}
+
+.actions>svg {
+    color: white;
+    font-size: 6vh;
+    margin-left: 6.5vh;
+    cursor: pointer;
+}
+
+.btn-play {
+    display: '';
+}
+
+.btn-zanting {
+    display: '';
+}
+
+.rightCon {
+    margin-left: 10vh;
+    float: left;
+    display: table-cell;
+    flex: 1;
+}
+
+.tag {
+    width: 60px;
+    height: 20px;
+    background: #2E6EEC;
+    font-size: 1vh;
+    text-align: center;
+}
+
+.rightCon>h1 {
+    margin-top: 4vh;
+    font-size: 7vh;
+}
+
+.icons {
+    margin-top: 10vh;
+    height: 10vh;
+}
+
+.icons>li {
+    padding-left: 15vh;
+    float: left;
+}
+
+.icons>li:first-child {
+    padding-left: 0;
+}
+
+.icons>li>svg {
+    font-size: 3vh;
+    margin-right: 2vh;
+}
+
+.Progress {
+    display: flex;
+    align-items: center;
+}
+
+.Progress-bg {
+    height: 0.5vh;
+    background: rgba(255, 255, 255, 0.4);
+
+    flex: 1;
+}
+
+.line {
+    width: 0%;
+    background: white;
+    height: 0.5vh;
+}
+
+.time {
+    font-size: 2vh;
+    margin-left: 2vh;
+}
+
+.singerName {
+    font-size: 2.5vh;
+    margin-top: .8vh;
+}
+
+.Lyric {
+    font-size: 2vh;
+    color: #FFFFFF;
+    margin-top: 2vh;
+}
+
+.footer {
+    height: 24vh;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.footer li.active {
+    box-shadow: 0px 0px 8px #FFFFFF, 2px 2px 5px #333333;
+
+}
+
+.footer .box {
+    position: relative;
+    overflow: hidden;
+    height: 24vh;
+}
+
+.layout {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.layout>span {
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    cursor: pointer;
+    margin-top: 5vh;
+    opacity: 0;
+    transition: all .4s;
+    cursor: pointer;
+    z-index: 1;
+    margin: 6.5vh 4vh;
+}
+
+.layout>span {
+    opacity: 1;
+    font-size: 10vh;
+}
+
+.layout>.Toleft {
+    left: -6vh;
+}
+
+.layout>.Toright {
+    right: -6vh;
+}
+
+.layout>.Toright {
+    float: right;
+}
+
+.box {
+    height: 24vh;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+}
+
+.box>ul {
+    height: 24vh;
+    display: flex;
+    font-size: 1vh;
+    overflow: hidden;
+    text-align: center;
+    position: absolute;
+}
+
+.box>ul>li {
+    width: 15vh;
+    margin: 4.5vh 4vh;
+    display: inline-table;
+}
+
+.box>ul>li:hover {
+    cursor: pointer;
+    -moz-box-shadow: 1px 1px 8px #FFFFFF, 2px 2px 5px #333333;
+    -webkit-box-shadow: 0px 0px 8px #FFFFFF, 2px 2px 5px #333333;
+    box-shadow: 0px 0px 8px #FFFFFF, 2px 2px 5px #333333;
+}
+
+.imgs {
+    width: 15vh;
+    height: 15vh;
+}
