@@ -84,7 +84,7 @@ var FooterJs = {
   },
   render() {
     var _this = this;
-    $.getJSON('http://api.jirengu.com/fm/getChannels.php')
+    $.getJSON('//api.jirengu.com/fm/getChannels.php')
       .done(function (ret) {
         _this.renderFooter(ret.channels)
       })
@@ -181,7 +181,7 @@ var Fm = {
   loadMusic(callback) {
     var _this = this
     console.log('loadMusic..')
-    $.getJSON('http://api.jirengu.com/fm/getSong.php', {
+    $.getJSON('//api.jirengu.com/fm/getSong.php', {
       channel: this.channelId
     }).done(function (ret) {
       _this.song = ret['song'][0]
@@ -193,7 +193,7 @@ var Fm = {
   loadLyric() {
     var _this = this
     console.log('loadMusic..')
-    $.getJSON('http://api.jirengu.com/fm/getLyric.php', {
+    $.getJSON('//api.jirengu.com/fm/getLyric.php', {
       sid: this.song.sid
     }).done(function (ret) {
       var lyric = ret.lyric
