@@ -169,11 +169,14 @@ var Fm = {
     this.$container.find('.btn-like').on('click', function () {
       $(this).hide()
       _this.$container.find('.btn-like2').show()
+      _this.heart=_this.heart+1  
+      _this.radomHtml()
     })
     this.$container.find('.btn-like2').on('click', function () {
       $(this).hide()
       _this.$container.find('.btn-like').show()
-
+      _this.heart=_this.heart-1  
+      _this.radomHtml()
     })
 
 
@@ -187,7 +190,8 @@ var Fm = {
       _this.song = ret['song'][0]
       _this.setMusic()
       _this.loadLyric()
-      _this.radom()
+    _this.radomMath()
+      _this.radomHtml()
     })
   },
   loadLyric() {
@@ -245,13 +249,24 @@ var Fm = {
       this.$container.find('.Lyric').text(lines)
     }
   },
-  radom(){
-  var a=parseInt(Math.random()*(100000-1000+1)+1000);   
-  var a=parseInt(Math.random()*(100000-1000+1)+1000);   
-
-  console.log(a)
-  console.log(a)
-
+  radomMath(){
+    this.listen=parseInt(Math.random()*(99282-1000+1)+1000);   
+    this.heart=b=parseInt(Math.random()*(92990-1000+1)+1000);   
+    this.laud=parseInt(Math.random()*(99999-1000+1)+1000); 
+  },
+  radomHtml(){
+  this.$container.find('.icons')
+  .html( 
+    '<li><svg class="icon" aria-hidden="true">'+
+  '<use xlink:href="#icon-headset"></use>'+
+     '</svg>'+this.listen+'</li>'+
+'<li><svg class="icon" aria-hidden="true">'+
+  '<use xlink:href="#icon-xihuan"></use>'+
+     '</svg>'+this.heart+'</li>'+
+'<li><svg class="icon" aria-hidden="true">'+
+  '<use xlink:href="#icon-dianzan"></use>'+
+     '</svg>'+this.laud+'</li>')
+    },
 
   }
 
