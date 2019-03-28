@@ -267,9 +267,6 @@ var Fm = {
   '<use xlink:href="#icon-dianzan"></use>'+
      '</svg>'+this.laud+'</li>')
     },
-
   }
-
-}
 FooterJs.init()
 Fm.init()
